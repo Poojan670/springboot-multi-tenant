@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png"><img src="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png" alt="Spring Boot" height="200"></a>
+  <a href="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png"><img src="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png" alt="Spring Boot" height="100%" width="100%"></a>
 </p>
 
 <p align="center">
@@ -52,4 +52,61 @@ Java 1.8+
 IntelliJ IDEA
 
 Eclipse
+
+
+## SETUP
+
+cd ./multi-schema-tenant or cd ./multidb-tenant
+
+_Configure application properties as per your DB configurations_
+
+```
+</div>
+
+<div class="termy">
+
+Using mvn package
+
+```console
+$ mvn install
+```
+</div>
+
+<div class="termy">
+
+Run the Project
+```console
+$ mvn spring-boot:run 
+```
+</div>
+
+**TESTING** 
+
+# For Multi Schema Tenant
+
+
+* `curl -X POST   http://localhost:8080/document/ -H 'Content-Type: application/json' -H 'X-TenantID: test1' -d '{"title":"Test1 title", "description":"Test1 Description}'`
+
+
+* `curl -X POST   http://localhost:8080/document/ -H 'Content-Type: application/json' -H 'X-TenantID: test2' -d '{"title":"Test2 title", "description":"Test2 Description}'`
+
+
+* `curl -X GET   http://localhost:8080/document/ -H 'Content-Type: application/json' -H 'X-TenantID: test1'`
+
+* `curl -X GET   http://localhost:8080/document/ -H 'Content-Type: application/json' -H 'X-TenantID: test2'`
+
+
+# For Multi DB Tenant
+
+_Tenant 1 would be default tenant db_
+
+* `curl -X POST   http://localhost:8080/document/ -H 'Content-Type: application/json' -H -d '{"title":"Tenant1 title", "description":"Tenant1 Description}'`
+
+
+* `curl -X POST   http://localhost:8080/document/ -H 'Content-Type: application/json' -H 'X-TenantID: test2' -d '{"title":"Tenant1 title", "description":"Tenant2 Description}'`
+
+
+* `curl -X GET   http://localhost:8080/document/ -H 'Content-Type: application/json' `
+
+* `curl -X GET   http://localhost:8080/document/ -H 'Content-Type: application/json' -H 'X-TenantID: Tenant2'`
 
