@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png"><img src="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png" alt="Spring Boot" height="500" width="500"></a>
+  <a href="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png"><img src="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png" alt="Spring Boot" height="100%" width="100%"></a>
 </p>
 
 <p align="center">
@@ -79,9 +79,9 @@ $ mvn spring-boot:run
 ```
 </div>
 
-**TESTING** 
+# TESTING
 
-# For Multi Schema Tenant
+**For Multi Schema Tenant**
 
 
 * `curl -X POST   http://localhost:8080/document/ -H 'Content-Type: application/json' -H 'X-TenantID: test1' -d '{"title":"Test1 title", "description":"Test1 Description}'`
@@ -95,7 +95,7 @@ $ mvn spring-boot:run
 * `curl -X GET   http://localhost:8080/document/ -H 'Content-Type: application/json' -H 'X-TenantID: test2'`
 
 
-# For Multi DB Tenant
+**For Multi DB Tenant**
 
 _Tenant 1 would be default tenant db_
 
