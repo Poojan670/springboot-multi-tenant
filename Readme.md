@@ -19,9 +19,6 @@ https://github.com/Poojan670/springboot-multitenant
 
 ---
 
-
----
-
 **Helpful articles and repos**
 
 Extremely helpful references and articles used in this repo.
