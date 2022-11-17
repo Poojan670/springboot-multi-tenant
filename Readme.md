@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png"><img src="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png" alt="Spring Boot" height="100%" width="100%"></a>
+  <a href="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png"><img src="https://www.codecrafttech.com/resources/wp-content/uploads/2021/06/Multi-Tenancy-Architecture.png" alt="Spring Boot" height="500" width="500"></a>
 </p>
 
 <p align="center">
@@ -60,17 +60,16 @@ cd ./multi-schema-tenant or cd ./multidb-tenant
 
 _Configure application properties as per your DB configurations_
 
-```
-</div>
-
 <div class="termy">
 
 Using mvn package
 
 ```console
 $ mvn install
+
 ```
 </div>
+
 
 <div class="termy">
 
